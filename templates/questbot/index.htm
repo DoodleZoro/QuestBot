@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>QuestBot</title>
+  </head>
+  <body style="background-color:rgb(255, 255, 250);">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">QuestBot</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            </ul>
+            <form class="d-flex" action="/bot_search/" method="GET">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+              <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container" style="padding: 50px;">
+      <form action="/bot_search/" method="GET">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label" style="font-size: 3ch; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Enter your Quest</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Here" name="query"> 
+          <div id="emailHelp" class="form-text">Have a good day</div>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Find</button>
+      </form>
+      {% if an %}
+
+      <h4 style="color: lightslategray; padding: 2px;">Result for Quest {{query}} :</h4>
+      <h4 style="padding: 2px;font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">{{an}}</h4>
+      
+
+      {% endif %}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
